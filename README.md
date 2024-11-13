@@ -29,10 +29,9 @@ pip install pyaudio
 import speech_recognition as sr
 
 r = sr.Recognizer()
-duration = 5
 print("Say something: ")
 with sr.Microphone() as source:
-    audio_data = r.listen(source, timeout=duration)
+    audio_data = r.listen(source)
 try:
     text = r.recognize_google(audio_data)
     print('You said:', text)
@@ -45,6 +44,8 @@ except Exception as e:
 ```
 
 <H3> Output:</H3>
+![8th AAI](https://github.com/user-attachments/assets/49859441-8ee9-4ac7-ac3c-8d024d477eec)
+
 
 
 <H3> Result:</H3>
